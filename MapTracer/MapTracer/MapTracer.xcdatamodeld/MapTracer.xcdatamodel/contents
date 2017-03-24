@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LandmarkEntity" representedClassName="LandmarkEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RouteEntity" inverseName="landmarks" inverseEntity="RouteEntity" syncable="YES"/>
+    </entity>
+    <entity name="RouteEntity" representedClassName="RouteEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="landmarks" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="LandmarkEntity" inverseName="route" inverseEntity="LandmarkEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LandmarkEntity" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="RouteEntity" positionX="124" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
