@@ -14,6 +14,20 @@
 		DF409D9D1E7E5AE700708D9C /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF409D9C1E7E5AE700708D9C /* Landmark.swift */; };
 		DF7166861E88629A00721E0B /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166851E88629A00721E0B /* RoutesTableViewController.swift */; };
 		DF7166881E88806200721E0B /* RouteButtonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166871E88806200721E0B /* RouteButtonsState.swift */; };
+		DF7166901E88AB4300721E0B /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF71668C1E88AB4300721E0B /* DebugMapViewController.xib */; };
+		DF7166911E88AB4300721E0B /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = DF71668D1E88AB4300721E0B /* hdar_close.png */; };
+		DF7166921E88AB4300721E0B /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF71668E1E88AB4300721E0B /* hdar_close@2x.png */; };
+		DF7166931E88AB4300721E0B /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF71668F1E88AB4300721E0B /* hdar_close@3x.png */; };
+		DF71669A1E88AB5800721E0B /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166951E88AB5800721E0B /* ARAnnotation.swift */; };
+		DF71669B1E88AB5800721E0B /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166961E88AB5800721E0B /* ARAnnotationView.swift */; };
+		DF71669C1E88AB5800721E0B /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166971E88AB5800721E0B /* ARConfiguration.swift */; };
+		DF71669D1E88AB5800721E0B /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166981E88AB5800721E0B /* ARTrackingManager.swift */; };
+		DF71669E1E88AB5800721E0B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166991E88AB5800721E0B /* ARViewController.swift */; };
+		DF7166A01E88AB6200721E0B /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71669F1E88AB6200721E0B /* DebugMapViewController.swift */; };
+		DF7166A31E88ABEC00721E0B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7166A21E88ABEC00721E0B /* CoreLocation.framework */; };
+		DF7166A51E88ABF800721E0B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7166A41E88ABF800721E0B /* CoreMotion.framework */; };
+		DF7166A71E88ABFF00721E0B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7166A61E88ABFF00721E0B /* MapKit.framework */; };
+		DF7166A91E88B43F00721E0B /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */; };
 		DF8870421E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF8870411E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx */; };
 		DF8870441E84C66500B06673 /* freedom_plaza.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF8870431E84C66500B06673 /* freedom_plaza.gpx */; };
 		DF9F7A971E8732370091D369 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9F7A951E8732370091D369 /* Interface.storyboard */; };
@@ -87,6 +101,20 @@
 		DF409D9C1E7E5AE700708D9C /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Landmark.swift; path = MapTracer/Landmark.swift; sourceTree = "<group>"; };
 		DF7166851E88629A00721E0B /* RoutesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
 		DF7166871E88806200721E0B /* RouteButtonsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteButtonsState.swift; sourceTree = "<group>"; };
+		DF71668C1E88AB4300721E0B /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		DF71668D1E88AB4300721E0B /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		DF71668E1E88AB4300721E0B /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		DF71668F1E88AB4300721E0B /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		DF7166951E88AB5800721E0B /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		DF7166961E88AB5800721E0B /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		DF7166971E88AB5800721E0B /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		DF7166981E88AB5800721E0B /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		DF7166991E88AB5800721E0B /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		DF71669F1E88AB6200721E0B /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		DF7166A21E88ABEC00721E0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DF7166A41E88ABF800721E0B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DF7166A61E88ABFF00721E0B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = ../TestAnnotationView.swift; sourceTree = "<group>"; };
 		DF8870411E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "butt-millet_memorial_fountain.gpx"; sourceTree = "<group>"; };
 		DF8870431E84C66500B06673 /* freedom_plaza.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = freedom_plaza.gpx; sourceTree = "<group>"; };
 		DF9F7A931E8732370091D369 /* MapTracerWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTracerWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,12 +152,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7166A71E88ABFF00721E0B /* MapKit.framework in Frameworks */,
+				DF7166A51E88ABF800721E0B /* CoreMotion.framework in Frameworks */,
+				DF7166A31E88ABEC00721E0B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF7166891E88AB1A00721E0B /* HDAugmentedReality */ = {
+			isa = PBXGroup;
+			children = (
+				DF71668B1E88AB3100721E0B /* Resources */,
+				DF71668A1E88AB2600721E0B /* Classes */,
+			);
+			name = HDAugmentedReality;
+			sourceTree = "<group>";
+		};
+		DF71668A1E88AB2600721E0B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF7166951E88AB5800721E0B /* ARAnnotation.swift */,
+				DF7166961E88AB5800721E0B /* ARAnnotationView.swift */,
+				DF7166971E88AB5800721E0B /* ARConfiguration.swift */,
+				DF7166981E88AB5800721E0B /* ARTrackingManager.swift */,
+				DF7166991E88AB5800721E0B /* ARViewController.swift */,
+				DF7166941E88AB4B00721E0B /* Debug */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DF71668B1E88AB3100721E0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF71668C1E88AB4300721E0B /* DebugMapViewController.xib */,
+				DF71668D1E88AB4300721E0B /* hdar_close.png */,
+				DF71668E1E88AB4300721E0B /* hdar_close@2x.png */,
+				DF71668F1E88AB4300721E0B /* hdar_close@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DF7166941E88AB4B00721E0B /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				DF71669F1E88AB6200721E0B /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		DF7166A11E88ABEC00721E0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF7166A61E88ABFF00721E0B /* MapKit.framework */,
+				DF7166A41E88ABF800721E0B /* CoreMotion.framework */,
+				DF7166A21E88ABEC00721E0B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DF9F7A941E8732370091D369 /* MapTracerWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +247,7 @@
 		DFDB61471E7CF557006CD591 = {
 			isa = PBXGroup;
 			children = (
+				DF7166891E88AB1A00721E0B /* HDAugmentedReality */,
 				DF9F7AB61E8753030091D369 /* Shared */,
 				DF8870431E84C66500B06673 /* freedom_plaza.gpx */,
 				DF8870411E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx */,
@@ -172,6 +255,7 @@
 				DF9F7A941E8732370091D369 /* MapTracerWatch */,
 				DF9F7AA31E8732370091D369 /* MapTracerWatch Extension */,
 				DFDB61511E7CF558006CD591 /* Products */,
+				DF7166A11E88ABEC00721E0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +286,7 @@
 				DF369A691E7F7DA3000E9991 /* NavigationController.swift */,
 				DF7166851E88629A00721E0B /* RoutesTableViewController.swift */,
 				DF7166871E88806200721E0B /* RouteButtonsState.swift */,
+				DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */,
 			);
 			path = MapTracer;
 			sourceTree = "<group>";
@@ -333,9 +418,13 @@
 			files = (
 				DFDB61611E7CF558006CD591 /* LaunchScreen.storyboard in Resources */,
 				DFDB615E1E7CF558006CD591 /* Assets.xcassets in Resources */,
+				DF7166921E88AB4300721E0B /* hdar_close@2x.png in Resources */,
 				DF8870441E84C66500B06673 /* freedom_plaza.gpx in Resources */,
 				DF8870421E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx in Resources */,
 				DFDB61591E7CF558006CD591 /* Main.storyboard in Resources */,
+				DF7166911E88AB4300721E0B /* hdar_close.png in Resources */,
+				DF7166931E88AB4300721E0B /* hdar_close@3x.png in Resources */,
+				DF7166901E88AB4300721E0B /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +451,21 @@
 				DF369A6A1E7F7DA3000E9991 /* NavigationController.swift in Sources */,
 				DF369A681E7F7010000E9991 /* QrReaderViewController.swift in Sources */,
 				DF369A661E7F635B000E9991 /* Route.swift in Sources */,
+				DF71669D1E88AB5800721E0B /* ARTrackingManager.swift in Sources */,
 				DF7166861E88629A00721E0B /* RoutesTableViewController.swift in Sources */,
 				DF409D9D1E7E5AE700708D9C /* Landmark.swift in Sources */,
+				DF71669A1E88AB5800721E0B /* ARAnnotation.swift in Sources */,
+				DF7166A01E88AB6200721E0B /* DebugMapViewController.swift in Sources */,
+				DF71669B1E88AB5800721E0B /* ARAnnotationView.swift in Sources */,
 				DF409D9B1E7E479500708D9C /* AddLandmarkViewController.swift in Sources */,
 				DFDB615C1E7CF558006CD591 /* MapTracer.xcdatamodeld in Sources */,
 				DFDB616B1E7D0225006CD591 /* QrViewController.swift in Sources */,
 				DFDB61561E7CF558006CD591 /* ViewController.swift in Sources */,
+				DF7166A91E88B43F00721E0B /* TestAnnotationView.swift in Sources */,
 				DF7166881E88806200721E0B /* RouteButtonsState.swift in Sources */,
+				DF71669E1E88AB5800721E0B /* ARViewController.swift in Sources */,
 				DFDB61691E7CFBED006CD591 /* MapViewController.swift in Sources */,
+				DF71669C1E88AB5800721E0B /* ARConfiguration.swift in Sources */,
 				DFDB61541E7CF558006CD591 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

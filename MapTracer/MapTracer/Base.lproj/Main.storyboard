@@ -224,6 +224,14 @@
                                     <segue destination="I1K-Bu-mpf" kind="show" identifier="addLandmark" id="AUQ-5D-pEo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L13-F6-6YA">
+                                <rect key="frame" x="90" y="110" width="141" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.41112607759999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Realidad Aumentada"/>
+                                <connections>
+                                    <action selector="startAugmentedReality" destination="xQb-re-Cnz" eventType="touchUpInside" id="JNu-C8-0Bc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -231,6 +239,7 @@
                             <constraint firstAttribute="trailing" secondItem="7Sg-qF-ruX" secondAttribute="trailing" id="15J-g5-J9N"/>
                             <constraint firstItem="bYc-So-kQC" firstAttribute="baseline" secondItem="A46-Vg-Obi" secondAttribute="baseline" id="1Sb-gk-kAy"/>
                             <constraint firstItem="uIY-h0-OEO" firstAttribute="centerX" secondItem="1bl-sT-x87" secondAttribute="centerX" id="8Fm-o1-jYz"/>
+                            <constraint firstItem="L13-F6-6YA" firstAttribute="centerX" secondItem="1bl-sT-x87" secondAttribute="centerX" id="BIS-PO-J9H"/>
                             <constraint firstItem="kiR-XI-KDr" firstAttribute="top" secondItem="ehj-wf-Js3" secondAttribute="bottom" constant="8" symbolic="YES" id="Efj-Hw-UB0"/>
                             <constraint firstItem="kiR-XI-KDr" firstAttribute="leading" secondItem="1bl-sT-x87" secondAttribute="leadingMargin" id="JAl-ab-x50"/>
                             <constraint firstItem="K10-Ii-8hw" firstAttribute="top" secondItem="A46-Vg-Obi" secondAttribute="bottom" constant="8" symbolic="YES" id="Jpk-KU-6YS"/>
@@ -246,6 +255,7 @@
                             <constraint firstItem="A46-Vg-Obi" firstAttribute="leading" secondItem="kiR-XI-KDr" secondAttribute="leading" id="d20-3o-dgM"/>
                             <constraint firstItem="Trl-8G-OVG" firstAttribute="leading" secondItem="bhH-Kf-3YL" secondAttribute="trailing" id="dAm-87-iLv"/>
                             <constraint firstItem="X3C-oe-BYC" firstAttribute="leading" secondItem="bYc-So-kQC" secondAttribute="trailing" id="hIG-LK-MrE"/>
+                            <constraint firstItem="L13-F6-6YA" firstAttribute="top" secondItem="kiR-XI-KDr" secondAttribute="bottom" constant="8" symbolic="YES" id="qLQ-Bs-YDW"/>
                             <constraint firstItem="bhH-Kf-3YL" firstAttribute="baseline" secondItem="Trl-8G-OVG" secondAttribute="baseline" id="rEd-qh-VeK"/>
                             <constraint firstItem="X3C-oe-BYC" firstAttribute="trailing" secondItem="Trl-8G-OVG" secondAttribute="trailing" id="u2I-9n-ceK"/>
                             <constraint firstItem="bYc-So-kQC" firstAttribute="baseline" secondItem="X3C-oe-BYC" secondAttribute="baseline" id="vlv-qO-Iqw"/>
@@ -255,6 +265,7 @@
                     </view>
                     <connections>
                         <outlet property="addLandmarkButton" destination="bYc-So-kQC" id="8gd-RD-55b"/>
+                        <outlet property="augmentedRealityButton" destination="L13-F6-6YA" id="VGM-Fh-fTm"/>
                         <outlet property="mapView" destination="7Sg-qF-ruX" id="Jla-KD-6dF"/>
                         <outlet property="saveRouteButton" destination="uIY-h0-OEO" id="LgB-t8-jzf"/>
                         <outlet property="viewRouteButton" destination="X3C-oe-BYC" id="Rky-5M-xrs"/>

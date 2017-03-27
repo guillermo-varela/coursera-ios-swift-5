@@ -9,19 +9,21 @@
 import UIKit
 import MapKit
 import CoreData
+import CoreLocation
 import WatchConnectivity
 
 protocol LandmarkHolderProtocol {
     func addLandmark(_ landmark: Landmark) -> Bool
 }
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, LandmarkHolderProtocol {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, ARDataSource, LandmarkHolderProtocol {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var zoomSlider: UISlider!
     @IBOutlet weak var viewRouteButton: UIButton!
     @IBOutlet weak var saveRouteButton: UIButton!
     @IBOutlet weak var addLandmarkButton: UIButton!
+    @IBOutlet weak var augmentedRealityButton: UIButton!
 
     var currentRoute: Route?
     var storedRoutes = [Route]()
@@ -63,7 +65,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             controller.storedRoutes = self.storedRoutes
         }
     }
-    
+
     // MARK: - Location
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
@@ -119,6 +121,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             let controller = segue.destination as! RoutesTableViewController
             controller.storedRoutes = self.storedRoutes
         }
+    }
+
+    // MARK: - HDAugmentedReality
+    func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let view = TestAnnotationView()
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        view.frame = CGRect(x: 0, y: 0, width: 150, height: 60)
+        return view
     }
 
     @IBAction func toggleMapType(sender: UIButton) {
@@ -187,13 +197,55 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
     @IBAction func shareRoute(_ sender: UIBarButtonItem) {
         let text = "Mira esta ruta"
-        let sharingRoutes: [Landmark] = currentRoute != nil ? (currentRoute?.landmarks)! : landmarks
-        let names = sharingRoutes.map({$0.name!}).joined(separator: ", ")
+        let sharingLandmarks: [Landmark] = currentRoute != nil ? (currentRoute?.landmarks)! : landmarks
+        let names = sharingLandmarks.map({$0.name!}).joined(separator: ", ")
         let shareObjects = [text, names] as [Any]
         
         let activity = UIActivityViewController(activityItems: shareObjects, applicationActivities: nil)
         activity.popoverPresentationController?.sourceView = self.view
         self.present(activity, animated: true)
+    }
+
+    @IBAction func startAugmentedReality() {
+        var latitude: CLLocationDegrees = 0.0
+        var longitude: CLLocationDegrees = 0.0
+        let arLandmarks: [Landmark] = currentRoute != nil ? (currentRoute?.landmarks)! : landmarks
+
+        if currentRoute != nil {
+            let arLandmark = arLandmarks[arLandmarks.count - 1]
+            latitude = arLandmark.latitude!
+            longitude = arLandmark.longitude!
+        } else {
+            let userLocation = mapView.userLocation
+            latitude = userLocation.coordinate.latitude
+            longitude = userLocation.coordinate.longitude
+        }
+
+        let arAnnotations = findAugmentedRealityAnnotations(latitud: latitude, longitud: longitude, arLandmarks: arLandmarks)
+
+        let arViewController = ARViewController()
+        arViewController.dataSource = self
+        arViewController.maxDistance = 0
+        arViewController.maxVisibleAnnotations = 100
+        arViewController.maxVerticalLevel = 5
+        arViewController.headingSmoothingFactor = 0.05
+        arViewController.trackingManager.userDistanceFilter = 25
+        arViewController.trackingManager.reloadDistanceFilter = 75
+        arViewController.setAnnotations(arAnnotations)
+        arViewController.uiOptions.debugEnabled = true
+        arViewController.uiOptions.closeButtonEnabled = true
+        self.present(arViewController, animated: true, completion: nil)
+    }
+
+    private func findAugmentedRealityAnnotations( latitud: Double, longitud: Double, arLandmarks: [Landmark]) -> Array<ARAnnotation>{
+        var arAnnotations: [ARAnnotation] = []
+        for landmark in arLandmarks {
+            let arAnnotation = ARAnnotation()
+            arAnnotation.location = CLLocation(latitude: landmark.latitude!, longitude: landmark.longitude!)
+            arAnnotation.title = landmark.name
+            arAnnotations.append(arAnnotation)
+        }
+        return arAnnotations
     }
 
     private func saveRoute(_ name: String?, _ description: String?) {
@@ -300,16 +352,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             self.viewRouteButton.setTitle("Ver Ruta", for: .normal)
             self.saveRouteButton.isHidden = true
             self.navigationItem.rightBarButtonItem?.isEnabled = false
+            self.augmentedRealityButton.isHidden = true
         case .remove:
             self.viewRouteButton.setTitle("Quitar Ruta", for: .normal)
             self.saveRouteButton.isHidden = false
             self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.augmentedRealityButton.isHidden = false
         case .stored :
             self.viewRouteButton.setTitle("Ver Ruta", for: .normal)
             self.viewRouteButton.isEnabled = false
             self.saveRouteButton.isHidden = true
             self.addLandmarkButton.isEnabled = false
             self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.augmentedRealityButton.isHidden = false
         }
     }
 
