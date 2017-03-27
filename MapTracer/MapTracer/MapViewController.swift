@@ -16,7 +16,7 @@ protocol LandmarkHolderProtocol {
     func addLandmark(_ landmark: Landmark) -> Bool
 }
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, ARDataSource, LandmarkHolderProtocol {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, WCSessionDelegate, ARDataSource, LandmarkHolderProtocol {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var zoomSlider: UISlider!
@@ -54,6 +54,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             showAvailableRouteButtons(.stored)
         } else {
             showAvailableRouteButtons(.view)
+        }
+
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
         }
     }
 
@@ -129,6 +135,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         view.frame = CGRect(x: 0, y: 0, width: 150, height: 60)
         return view
+    }
+
+    // MARK: - WatchKit
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if storedRoutes.count > 0 && activationState == .activated && session.isPaired && session.isWatchAppInstalled {
+            for route in storedRoutes {
+                session.transferUserInfo(route.toDictionary())
+            }
+        }
+    }
+
+    public func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Watch session inactive")
+    }
+    
+    public func sessionDidDeactivate(_ session: WCSession) {
+        print("Watch session deactivated")
     }
 
     @IBAction func toggleMapType(sender: UIButton) {
@@ -278,6 +301,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     currentRoute = route
                     showAvailableRouteButtons(.stored)
                     showMessage("Éxito", "Ruta agregada.")
+
+                    if (WCSession.isSupported()) {
+                        let session = WCSession.default()
+                        if session.activationState == .activated {
+                            session.transferUserInfo(route.toDictionary())
+                        }
+                    }
                 } catch {
                     showMessage("Ups", "Error guardando la ruta.")
                 }

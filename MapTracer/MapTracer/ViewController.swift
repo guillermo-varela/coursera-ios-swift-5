@@ -56,20 +56,15 @@ class ViewController: UIViewController, WCSessionDelegate {
     /*
      // MARK: - WatchKit
      */
-    
+
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         if storedRoutes.count > 0 && activationState == .activated && session.isPaired && session.isWatchAppInstalled {
-            do {
-                for route in storedRoutes {
-                    try session.updateApplicationContext(route.toDictionary())
-                }
-                print("Routes sent")
-            } catch {
-                print(error as Any)
+            for route in storedRoutes {
+                session.transferUserInfo(route.toDictionary())
             }
         }
     }
-    
+
     public func sessionDidBecomeInactive(_ session: WCSession) {
         print("Watch session inactive")
     }

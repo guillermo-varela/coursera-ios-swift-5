@@ -41,8 +41,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("Session status: \(activationState)")
     }
 
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        let route = Route.fromDictionary(data: applicationContext)
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        let route = Route.fromDictionary(data: userInfo)
         if !routes.contains(route) {
             routes.append(route)
             routesTable.setNumberOfRows(routes.count, withRowType: "RouteRow")
