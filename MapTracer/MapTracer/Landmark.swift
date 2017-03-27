@@ -24,6 +24,22 @@ struct Landmark: Equatable {
         return mapItem
     }
 
+    public func toCLLocationCoordinate2D() -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+    }
+
+    public func toDictionary() -> [String : Any] {
+        return ["name": name!, "latitude": latitude!, "longitude": longitude!]
+    }
+
+    public static func fromDictionary(data: [String : Any]) -> Landmark {
+        var landmark = Landmark()
+        landmark.name = data["name"] as! String?
+        landmark.latitude = data["latitude"] as! CLLocationDegrees?
+        landmark.longitude = data["longitude"] as! CLLocationDegrees?
+        return landmark
+    }
+
     static func == (lhs: Landmark, rhs: Landmark) -> Bool {
         return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }

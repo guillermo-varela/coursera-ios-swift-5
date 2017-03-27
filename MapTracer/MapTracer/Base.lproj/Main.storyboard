@@ -26,7 +26,7 @@
                                 <rect key="frame" x="140.5" y="191.5" width="39" height="30"/>
                                 <state key="normal" title="Rutas"/>
                                 <connections>
-                                    <segue destination="xQb-re-Cnz" kind="show" id="PF2-Qd-C0c"/>
+                                    <segue destination="5Ca-4b-Qgt" kind="show" id="JgI-CX-sCp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vac-Rg-wdl">
@@ -106,10 +106,42 @@
             </objects>
             <point key="canvasLocation" x="106.875" y="933.75"/>
         </scene>
-        <!--Routes View Controller-->
+        <!--Rutas-->
+        <scene sceneID="A7j-4b-NhR">
+            <objects>
+                <tableViewController title="Rutas" id="5Ca-4b-Qgt" customClass="RoutesTableViewController" customModule="MapTracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hOi-lF-WBE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="routeCell" id="jHU-OI-Yc2">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jHU-OI-Yc2" id="uxG-40-Vof">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xQb-re-Cnz" kind="show" identifier="mapSegue" id="3sT-yG-JwQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="5Ca-4b-Qgt" id="0vp-oa-e14"/>
+                            <outlet property="delegate" destination="5Ca-4b-Qgt" id="39o-Cj-P5q"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keN-yT-G7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678" y="135"/>
+        </scene>
+        <!--Mapa-->
         <scene sceneID="edm-tL-DJH">
             <objects>
-                <viewController id="xQb-re-Cnz" customClass="RoutesViewController" customModule="MapTracer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Mapa" id="xQb-re-Cnz" customClass="MapViewController" customModule="MapTracer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ehj-wf-Js3"/>
                         <viewControllerLayoutGuide type="bottom" id="K10-Ii-8hw"/>
@@ -135,7 +167,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40999999999999998" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Guardar Ruta"/>
                                 <connections>
-                                    <segue destination="vlv-gf-Mlj" kind="show" id="1uh-wR-jFB"/>
+                                    <action selector="presentSaveRouteAlert" destination="xQb-re-Cnz" eventType="touchUpInside" id="H8c-uQ-bfX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiR-XI-KDr">
@@ -222,6 +254,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addLandmarkButton" destination="bYc-So-kQC" id="8gd-RD-55b"/>
                         <outlet property="mapView" destination="7Sg-qF-ruX" id="Jla-KD-6dF"/>
                         <outlet property="saveRouteButton" destination="uIY-h0-OEO" id="LgB-t8-jzf"/>
                         <outlet property="viewRouteButton" destination="X3C-oe-BYC" id="Rky-5M-xrs"/>
@@ -230,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sd-Q3-g97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689.375" y="135"/>
+            <point key="canvasLocation" x="2471" y="135"/>
         </scene>
         <!--Qr Reader View Controller-->
         <scene sceneID="BmZ-3D-M2d">
@@ -249,59 +282,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVi-Xr-LII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="953" y="934"/>
-        </scene>
-        <!--Add Route View Controller-->
-        <scene sceneID="Baq-p2-cpa">
-            <objects>
-                <viewController id="vlv-gf-Mlj" customClass="AddRouteViewController" customModule="MapTracer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DHW-mX-cLl"/>
-                        <viewControllerLayoutGuide type="bottom" id="LAc-WG-n9M"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Uww-w2-IS5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCy-ff-cdD">
-                                <rect key="frame" x="16" y="72" width="288" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0c-OR-bpz">
-                                <rect key="frame" x="16" y="110" width="288" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgC-jG-QzX">
-                                <rect key="frame" x="133" y="148" width="55" height="30"/>
-                                <state key="normal" title="Agregar"/>
-                                <connections>
-                                    <action selector="saveRoute" destination="vlv-gf-Mlj" eventType="touchUpInside" id="FJb-Wb-v56"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="LCy-ff-cdD" firstAttribute="leading" secondItem="Uww-w2-IS5" secondAttribute="leadingMargin" id="7NC-sZ-LfU"/>
-                            <constraint firstItem="LCy-ff-cdD" firstAttribute="trailing" secondItem="J0c-OR-bpz" secondAttribute="trailing" id="D3j-gD-eRb"/>
-                            <constraint firstItem="LCy-ff-cdD" firstAttribute="top" secondItem="DHW-mX-cLl" secondAttribute="bottom" constant="8" symbolic="YES" id="H4E-xd-Gso"/>
-                            <constraint firstItem="LCy-ff-cdD" firstAttribute="leading" secondItem="J0c-OR-bpz" secondAttribute="leading" id="XsY-L1-jt0"/>
-                            <constraint firstItem="J0c-OR-bpz" firstAttribute="centerX" secondItem="bgC-jG-QzX" secondAttribute="centerX" id="qyI-ZB-tmb"/>
-                            <constraint firstItem="J0c-OR-bpz" firstAttribute="top" secondItem="LCy-ff-cdD" secondAttribute="bottom" constant="8" symbolic="YES" id="rsJ-fQ-KTG"/>
-                            <constraint firstItem="bgC-jG-QzX" firstAttribute="centerX" secondItem="Uww-w2-IS5" secondAttribute="centerX" id="rz8-uF-CBZ"/>
-                            <constraint firstItem="bgC-jG-QzX" firstAttribute="top" secondItem="J0c-OR-bpz" secondAttribute="bottom" constant="8" symbolic="YES" id="vGc-FE-VlF"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="descriptionTextField" destination="J0c-OR-bpz" id="F75-6x-agl"/>
-                        <outlet property="nameTextField" destination="LCy-ff-cdD" id="naz-jr-VHb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NNR-0r-hJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1687.5" y="933.75"/>
         </scene>
         <!--Add Landmark View Controller-->
         <scene sceneID="C2D-FD-LjN">
@@ -398,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtj-Cj-h4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512.5" y="135"/>
+            <point key="canvasLocation" x="3253" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pse-8u-dzn">
