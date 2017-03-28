@@ -41,6 +41,11 @@
 		DF9F7AB81E8753210091D369 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF369A651E7F635B000E9991 /* Route.swift */; };
 		DF9F7ABA1E876C6A0091D369 /* RouteRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F7AB91E876C6A0091D369 /* RouteRowController.swift */; };
 		DF9F7ABC1E87743B0091D369 /* RouteInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F7ABB1E87743B0091D369 /* RouteInterfaceController.swift */; };
+		DFB4246D1E8A048B00C4215F /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4246C1E8A048B00C4215F /* EventsTableViewController.swift */; };
+		DFB4246F1E8A09D200C4215F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4246E1E8A09D200C4215F /* Event.swift */; };
+		DFB424701E8A09DC00C4215F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4246E1E8A09D200C4215F /* Event.swift */; };
+		DFB424741E8A229A00C4215F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB424731E8A229A00C4215F /* EventTableViewCell.swift */; };
+		DFB424761E8A288E00C4215F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB424751E8A288E00C4215F /* AboutViewController.swift */; };
 		DFDB61541E7CF558006CD591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB61531E7CF558006CD591 /* AppDelegate.swift */; };
 		DFDB61561E7CF558006CD591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB61551E7CF558006CD591 /* ViewController.swift */; };
 		DFDB61591E7CF558006CD591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDB61571E7CF558006CD591 /* Main.storyboard */; };
@@ -128,6 +133,10 @@
 		DF9F7AAA1E8732370091D369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF9F7AB91E876C6A0091D369 /* RouteRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteRowController.swift; sourceTree = "<group>"; };
 		DF9F7ABB1E87743B0091D369 /* RouteInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteInterfaceController.swift; sourceTree = "<group>"; };
+		DFB4246C1E8A048B00C4215F /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		DFB4246E1E8A09D200C4215F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DFB424731E8A229A00C4215F /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		DFB424751E8A288E00C4215F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DFDB61501E7CF558006CD591 /* MapTracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDB61531E7CF558006CD591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDB61551E7CF558006CD591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +249,7 @@
 			children = (
 				DF409D9C1E7E5AE700708D9C /* Landmark.swift */,
 				DF369A651E7F635B000E9991 /* Route.swift */,
+				DFB4246E1E8A09D200C4215F /* Event.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -287,6 +297,9 @@
 				DF7166851E88629A00721E0B /* RoutesTableViewController.swift */,
 				DF7166871E88806200721E0B /* RouteButtonsState.swift */,
 				DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */,
+				DFB4246C1E8A048B00C4215F /* EventsTableViewController.swift */,
+				DFB424731E8A229A00C4215F /* EventTableViewCell.swift */,
+				DFB424751E8A288E00C4215F /* AboutViewController.swift */,
 			);
 			path = MapTracer;
 			sourceTree = "<group>";
@@ -440,6 +453,7 @@
 				DF9F7AB81E8753210091D369 /* Route.swift in Sources */,
 				DF9F7AA51E8732370091D369 /* InterfaceController.swift in Sources */,
 				DF9F7ABA1E876C6A0091D369 /* RouteRowController.swift in Sources */,
+				DFB424701E8A09DC00C4215F /* Event.swift in Sources */,
 				DF9F7AB71E87531E0091D369 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,11 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB424741E8A229A00C4215F /* EventTableViewCell.swift in Sources */,
 				DF369A6A1E7F7DA3000E9991 /* NavigationController.swift in Sources */,
 				DF369A681E7F7010000E9991 /* QrReaderViewController.swift in Sources */,
 				DF369A661E7F635B000E9991 /* Route.swift in Sources */,
 				DF71669D1E88AB5800721E0B /* ARTrackingManager.swift in Sources */,
 				DF7166861E88629A00721E0B /* RoutesTableViewController.swift in Sources */,
+				DFB4246D1E8A048B00C4215F /* EventsTableViewController.swift in Sources */,
 				DF409D9D1E7E5AE700708D9C /* Landmark.swift in Sources */,
 				DF71669A1E88AB5800721E0B /* ARAnnotation.swift in Sources */,
 				DF7166A01E88AB6200721E0B /* DebugMapViewController.swift in Sources */,
@@ -466,7 +482,9 @@
 				DF71669E1E88AB5800721E0B /* ARViewController.swift in Sources */,
 				DFDB61691E7CFBED006CD591 /* MapViewController.swift in Sources */,
 				DF71669C1E88AB5800721E0B /* ARConfiguration.swift in Sources */,
+				DFB4246F1E8A09D200C4215F /* Event.swift in Sources */,
 				DFDB61541E7CF558006CD591 /* AppDelegate.swift in Sources */,
+				DFB424761E8A288E00C4215F /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
