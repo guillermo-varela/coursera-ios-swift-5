@@ -63,6 +63,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        print(storedRoutes)
+    }
+
     override func viewWillDisappear(_ animated : Bool) {
         super.viewWillDisappear(animated)
 
