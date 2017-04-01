@@ -7,33 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF369A641E7F61F0000E9991 /* AddRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF369A631E7F61F0000E9991 /* AddRouteViewController.swift */; };
 		DF369A661E7F635B000E9991 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF369A651E7F635B000E9991 /* Route.swift */; };
 		DF369A681E7F7010000E9991 /* QrReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF369A671E7F7010000E9991 /* QrReaderViewController.swift */; };
 		DF369A6A1E7F7DA3000E9991 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF369A691E7F7DA3000E9991 /* NavigationController.swift */; };
 		DF409D9B1E7E479500708D9C /* AddLandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF409D9A1E7E479500708D9C /* AddLandmarkViewController.swift */; };
 		DF409D9D1E7E5AE700708D9C /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF409D9C1E7E5AE700708D9C /* Landmark.swift */; };
+		DF7166861E88629A00721E0B /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166851E88629A00721E0B /* RoutesTableViewController.swift */; };
+		DF7166881E88806200721E0B /* RouteButtonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166871E88806200721E0B /* RouteButtonsState.swift */; };
+		DF7166901E88AB4300721E0B /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF71668C1E88AB4300721E0B /* DebugMapViewController.xib */; };
+		DF7166911E88AB4300721E0B /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = DF71668D1E88AB4300721E0B /* hdar_close.png */; };
+		DF7166921E88AB4300721E0B /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF71668E1E88AB4300721E0B /* hdar_close@2x.png */; };
+		DF7166931E88AB4300721E0B /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF71668F1E88AB4300721E0B /* hdar_close@3x.png */; };
+		DF71669A1E88AB5800721E0B /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166951E88AB5800721E0B /* ARAnnotation.swift */; };
+		DF71669B1E88AB5800721E0B /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166961E88AB5800721E0B /* ARAnnotationView.swift */; };
+		DF71669C1E88AB5800721E0B /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166971E88AB5800721E0B /* ARConfiguration.swift */; };
+		DF71669D1E88AB5800721E0B /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166981E88AB5800721E0B /* ARTrackingManager.swift */; };
+		DF71669E1E88AB5800721E0B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166991E88AB5800721E0B /* ARViewController.swift */; };
+		DF7166A01E88AB6200721E0B /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71669F1E88AB6200721E0B /* DebugMapViewController.swift */; };
+		DF7166A31E88ABEC00721E0B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7166A21E88ABEC00721E0B /* CoreLocation.framework */; };
+		DF7166A51E88ABF800721E0B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7166A41E88ABF800721E0B /* CoreMotion.framework */; };
+		DF7166A71E88ABFF00721E0B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7166A61E88ABFF00721E0B /* MapKit.framework */; };
+		DF7166A91E88B43F00721E0B /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */; };
 		DF8870421E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF8870411E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx */; };
 		DF8870441E84C66500B06673 /* freedom_plaza.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DF8870431E84C66500B06673 /* freedom_plaza.gpx */; };
+		DF9F7A971E8732370091D369 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9F7A951E8732370091D369 /* Interface.storyboard */; };
+		DF9F7A991E8732370091D369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9F7A981E8732370091D369 /* Assets.xcassets */; };
+		DF9F7AA01E8732370091D369 /* MapTracerWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DF9F7A9F1E8732370091D369 /* MapTracerWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DF9F7AA51E8732370091D369 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F7AA41E8732370091D369 /* InterfaceController.swift */; };
+		DF9F7AA71E8732370091D369 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F7AA61E8732370091D369 /* ExtensionDelegate.swift */; };
+		DF9F7AA91E8732370091D369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9F7AA81E8732370091D369 /* Assets.xcassets */; };
+		DF9F7AAD1E8732370091D369 /* MapTracerWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DF9F7A931E8732370091D369 /* MapTracerWatch.app */; };
+		DF9F7AB71E87531E0091D369 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF409D9C1E7E5AE700708D9C /* Landmark.swift */; };
+		DF9F7AB81E8753210091D369 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF369A651E7F635B000E9991 /* Route.swift */; };
+		DF9F7ABA1E876C6A0091D369 /* RouteRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F7AB91E876C6A0091D369 /* RouteRowController.swift */; };
+		DF9F7ABC1E87743B0091D369 /* RouteInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9F7ABB1E87743B0091D369 /* RouteInterfaceController.swift */; };
+		DFB4246D1E8A048B00C4215F /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4246C1E8A048B00C4215F /* EventsTableViewController.swift */; };
+		DFB4246F1E8A09D200C4215F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4246E1E8A09D200C4215F /* Event.swift */; };
+		DFB424701E8A09DC00C4215F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB4246E1E8A09D200C4215F /* Event.swift */; };
+		DFB424741E8A229A00C4215F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB424731E8A229A00C4215F /* EventTableViewCell.swift */; };
+		DFB424761E8A288E00C4215F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB424751E8A288E00C4215F /* AboutViewController.swift */; };
 		DFDB61541E7CF558006CD591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB61531E7CF558006CD591 /* AppDelegate.swift */; };
 		DFDB61561E7CF558006CD591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB61551E7CF558006CD591 /* ViewController.swift */; };
 		DFDB61591E7CF558006CD591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDB61571E7CF558006CD591 /* Main.storyboard */; };
 		DFDB615C1E7CF558006CD591 /* MapTracer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFDB615A1E7CF558006CD591 /* MapTracer.xcdatamodeld */; };
 		DFDB615E1E7CF558006CD591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDB615D1E7CF558006CD591 /* Assets.xcassets */; };
 		DFDB61611E7CF558006CD591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDB615F1E7CF558006CD591 /* LaunchScreen.storyboard */; };
-		DFDB61691E7CFBED006CD591 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB61681E7CFBED006CD591 /* RoutesViewController.swift */; };
+		DFDB61691E7CFBED006CD591 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB61681E7CFBED006CD591 /* MapViewController.swift */; };
 		DFDB616B1E7D0225006CD591 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDB616A1E7D0225006CD591 /* QrViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DF9F7AA11E8732370091D369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFDB61481E7CF557006CD591 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF9F7A9E1E8732370091D369;
+			remoteInfo = "MapTracerWatch Extension";
+		};
+		DF9F7AAB1E8732370091D369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFDB61481E7CF557006CD591 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF9F7A921E8732370091D369;
+			remoteInfo = MapTracerWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF9F7AB31E8732370091D369 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DF9F7AA01E8732370091D369 /* MapTracerWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF9F7AB51E8732370091D369 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DF9F7AAD1E8732370091D369 /* MapTracerWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		DF369A631E7F61F0000E9991 /* AddRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouteViewController.swift; sourceTree = "<group>"; };
-		DF369A651E7F635B000E9991 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		DF369A651E7F635B000E9991 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = MapTracer/Route.swift; sourceTree = "<group>"; };
 		DF369A671E7F7010000E9991 /* QrReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrReaderViewController.swift; sourceTree = "<group>"; };
 		DF369A691E7F7DA3000E9991 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		DF409D9A1E7E479500708D9C /* AddLandmarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLandmarkViewController.swift; sourceTree = "<group>"; };
-		DF409D9C1E7E5AE700708D9C /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		DF409D9C1E7E5AE700708D9C /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Landmark.swift; path = MapTracer/Landmark.swift; sourceTree = "<group>"; };
+		DF7166851E88629A00721E0B /* RoutesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
+		DF7166871E88806200721E0B /* RouteButtonsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteButtonsState.swift; sourceTree = "<group>"; };
+		DF71668C1E88AB4300721E0B /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		DF71668D1E88AB4300721E0B /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		DF71668E1E88AB4300721E0B /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		DF71668F1E88AB4300721E0B /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		DF7166951E88AB5800721E0B /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		DF7166961E88AB5800721E0B /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		DF7166971E88AB5800721E0B /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		DF7166981E88AB5800721E0B /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		DF7166991E88AB5800721E0B /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		DF71669F1E88AB6200721E0B /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		DF7166A21E88ABEC00721E0B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DF7166A41E88ABF800721E0B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DF7166A61E88ABFF00721E0B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = ../TestAnnotationView.swift; sourceTree = "<group>"; };
 		DF8870411E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "butt-millet_memorial_fountain.gpx"; sourceTree = "<group>"; };
 		DF8870431E84C66500B06673 /* freedom_plaza.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = freedom_plaza.gpx; sourceTree = "<group>"; };
+		DF9F7A931E8732370091D369 /* MapTracerWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTracerWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9F7A961E8732370091D369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DF9F7A981E8732370091D369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF9F7A9A1E8732370091D369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF9F7A9F1E8732370091D369 /* MapTracerWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MapTracerWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9F7AA41E8732370091D369 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DF9F7AA61E8732370091D369 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		DF9F7AA81E8732370091D369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF9F7AAA1E8732370091D369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF9F7AB91E876C6A0091D369 /* RouteRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteRowController.swift; sourceTree = "<group>"; };
+		DF9F7ABB1E87743B0091D369 /* RouteInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteInterfaceController.swift; sourceTree = "<group>"; };
+		DFB4246C1E8A048B00C4215F /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		DFB4246E1E8A09D200C4215F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DFB424731E8A229A00C4215F /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		DFB424751E8A288E00C4215F /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		DFDB61501E7CF558006CD591 /* MapTracer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapTracer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDB61531E7CF558006CD591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDB61551E7CF558006CD591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,28 +145,127 @@
 		DFDB615D1E7CF558006CD591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFDB61601E7CF558006CD591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFDB61621E7CF558006CD591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFDB61681E7CFBED006CD591 /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		DFDB61681E7CFBED006CD591 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DFDB616A1E7D0225006CD591 /* QrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DFDB614D1E7CF558006CD591 /* Frameworks */ = {
+		DF9F7A9C1E8732370091D369 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFDB614D1E7CF558006CD591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF7166A71E88ABFF00721E0B /* MapKit.framework in Frameworks */,
+				DF7166A51E88ABF800721E0B /* CoreMotion.framework in Frameworks */,
+				DF7166A31E88ABEC00721E0B /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF7166891E88AB1A00721E0B /* HDAugmentedReality */ = {
+			isa = PBXGroup;
+			children = (
+				DF71668B1E88AB3100721E0B /* Resources */,
+				DF71668A1E88AB2600721E0B /* Classes */,
+			);
+			name = HDAugmentedReality;
+			sourceTree = "<group>";
+		};
+		DF71668A1E88AB2600721E0B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DF7166951E88AB5800721E0B /* ARAnnotation.swift */,
+				DF7166961E88AB5800721E0B /* ARAnnotationView.swift */,
+				DF7166971E88AB5800721E0B /* ARConfiguration.swift */,
+				DF7166981E88AB5800721E0B /* ARTrackingManager.swift */,
+				DF7166991E88AB5800721E0B /* ARViewController.swift */,
+				DF7166941E88AB4B00721E0B /* Debug */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DF71668B1E88AB3100721E0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF71668C1E88AB4300721E0B /* DebugMapViewController.xib */,
+				DF71668D1E88AB4300721E0B /* hdar_close.png */,
+				DF71668E1E88AB4300721E0B /* hdar_close@2x.png */,
+				DF71668F1E88AB4300721E0B /* hdar_close@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DF7166941E88AB4B00721E0B /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				DF71669F1E88AB6200721E0B /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		DF7166A11E88ABEC00721E0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF7166A61E88ABFF00721E0B /* MapKit.framework */,
+				DF7166A41E88ABF800721E0B /* CoreMotion.framework */,
+				DF7166A21E88ABEC00721E0B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF9F7A941E8732370091D369 /* MapTracerWatch */ = {
+			isa = PBXGroup;
+			children = (
+				DF9F7A951E8732370091D369 /* Interface.storyboard */,
+				DF9F7A981E8732370091D369 /* Assets.xcassets */,
+				DF9F7A9A1E8732370091D369 /* Info.plist */,
+			);
+			path = MapTracerWatch;
+			sourceTree = "<group>";
+		};
+		DF9F7AA31E8732370091D369 /* MapTracerWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DF9F7AA41E8732370091D369 /* InterfaceController.swift */,
+				DF9F7AA61E8732370091D369 /* ExtensionDelegate.swift */,
+				DF9F7AA81E8732370091D369 /* Assets.xcassets */,
+				DF9F7AAA1E8732370091D369 /* Info.plist */,
+				DF9F7AB91E876C6A0091D369 /* RouteRowController.swift */,
+				DF9F7ABB1E87743B0091D369 /* RouteInterfaceController.swift */,
+			);
+			path = "MapTracerWatch Extension";
+			sourceTree = "<group>";
+		};
+		DF9F7AB61E8753030091D369 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DF409D9C1E7E5AE700708D9C /* Landmark.swift */,
+				DF369A651E7F635B000E9991 /* Route.swift */,
+				DFB4246E1E8A09D200C4215F /* Event.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		DFDB61471E7CF557006CD591 = {
 			isa = PBXGroup;
 			children = (
+				DF7166891E88AB1A00721E0B /* HDAugmentedReality */,
+				DF9F7AB61E8753030091D369 /* Shared */,
 				DF8870431E84C66500B06673 /* freedom_plaza.gpx */,
 				DF8870411E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx */,
 				DFDB61521E7CF558006CD591 /* MapTracer */,
+				DF9F7A941E8732370091D369 /* MapTracerWatch */,
+				DF9F7AA31E8732370091D369 /* MapTracerWatch Extension */,
 				DFDB61511E7CF558006CD591 /* Products */,
+				DF7166A11E88ABEC00721E0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				DFDB61501E7CF558006CD591 /* MapTracer.app */,
+				DF9F7A931E8732370091D369 /* MapTracerWatch.app */,
+				DF9F7A9F1E8732370091D369 /* MapTracerWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,14 +289,17 @@
 				DFDB615F1E7CF558006CD591 /* LaunchScreen.storyboard */,
 				DFDB61621E7CF558006CD591 /* Info.plist */,
 				DFDB615A1E7CF558006CD591 /* MapTracer.xcdatamodeld */,
-				DFDB61681E7CFBED006CD591 /* RoutesViewController.swift */,
+				DFDB61681E7CFBED006CD591 /* MapViewController.swift */,
 				DFDB616A1E7D0225006CD591 /* QrViewController.swift */,
 				DF409D9A1E7E479500708D9C /* AddLandmarkViewController.swift */,
-				DF409D9C1E7E5AE700708D9C /* Landmark.swift */,
-				DF369A631E7F61F0000E9991 /* AddRouteViewController.swift */,
-				DF369A651E7F635B000E9991 /* Route.swift */,
 				DF369A671E7F7010000E9991 /* QrReaderViewController.swift */,
 				DF369A691E7F7DA3000E9991 /* NavigationController.swift */,
+				DF7166851E88629A00721E0B /* RoutesTableViewController.swift */,
+				DF7166871E88806200721E0B /* RouteButtonsState.swift */,
+				DF7166A81E88B43F00721E0B /* TestAnnotationView.swift */,
+				DFB4246C1E8A048B00C4215F /* EventsTableViewController.swift */,
+				DFB424731E8A229A00C4215F /* EventTableViewCell.swift */,
+				DFB424751E8A288E00C4215F /* AboutViewController.swift */,
 			);
 			path = MapTracer;
 			sourceTree = "<group>";
@@ -100,6 +307,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DF9F7A921E8732370091D369 /* MapTracerWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF9F7AB41E8732370091D369 /* Build configuration list for PBXNativeTarget "MapTracerWatch" */;
+			buildPhases = (
+				DF9F7A911E8732370091D369 /* Resources */,
+				DF9F7AB31E8732370091D369 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF9F7AA21E8732370091D369 /* PBXTargetDependency */,
+			);
+			name = MapTracerWatch;
+			productName = MapTracerWatch;
+			productReference = DF9F7A931E8732370091D369 /* MapTracerWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DF9F7A9E1E8732370091D369 /* MapTracerWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF9F7AB21E8732370091D369 /* Build configuration list for PBXNativeTarget "MapTracerWatch Extension" */;
+			buildPhases = (
+				DF9F7A9B1E8732370091D369 /* Sources */,
+				DF9F7A9C1E8732370091D369 /* Frameworks */,
+				DF9F7A9D1E8732370091D369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MapTracerWatch Extension";
+			productName = "MapTracerWatch Extension";
+			productReference = DF9F7A9F1E8732370091D369 /* MapTracerWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		DFDB614F1E7CF558006CD591 /* MapTracer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFDB61651E7CF558006CD591 /* Build configuration list for PBXNativeTarget "MapTracer" */;
@@ -107,10 +348,12 @@
 				DFDB614C1E7CF558006CD591 /* Sources */,
 				DFDB614D1E7CF558006CD591 /* Frameworks */,
 				DFDB614E1E7CF558006CD591 /* Resources */,
+				DF9F7AB51E8732370091D369 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DF9F7AAC1E8732370091D369 /* PBXTargetDependency */,
 			);
 			name = MapTracer;
 			productName = MapTracer;
@@ -127,6 +370,16 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Guillermo Varela";
 				TargetAttributes = {
+					DF9F7A921E8732370091D369 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CRCJ9D7Q8C;
+						ProvisioningStyle = Automatic;
+					};
+					DF9F7A9E1E8732370091D369 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CRCJ9D7Q8C;
+						ProvisioningStyle = Automatic;
+					};
 					DFDB614F1E7CF558006CD591 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = CRCJ9D7Q8C;
@@ -148,47 +401,117 @@
 			projectRoot = "";
 			targets = (
 				DFDB614F1E7CF558006CD591 /* MapTracer */,
+				DF9F7A921E8732370091D369 /* MapTracerWatch */,
+				DF9F7A9E1E8732370091D369 /* MapTracerWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DF9F7A911E8732370091D369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF9F7A991E8732370091D369 /* Assets.xcassets in Resources */,
+				DF9F7A971E8732370091D369 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF9F7A9D1E8732370091D369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF9F7AA91E8732370091D369 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFDB614E1E7CF558006CD591 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DFDB61611E7CF558006CD591 /* LaunchScreen.storyboard in Resources */,
 				DFDB615E1E7CF558006CD591 /* Assets.xcassets in Resources */,
+				DF7166921E88AB4300721E0B /* hdar_close@2x.png in Resources */,
 				DF8870441E84C66500B06673 /* freedom_plaza.gpx in Resources */,
 				DF8870421E84BA7D00B06673 /* butt-millet_memorial_fountain.gpx in Resources */,
 				DFDB61591E7CF558006CD591 /* Main.storyboard in Resources */,
+				DF7166911E88AB4300721E0B /* hdar_close.png in Resources */,
+				DF7166931E88AB4300721E0B /* hdar_close@3x.png in Resources */,
+				DF7166901E88AB4300721E0B /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DF9F7A9B1E8732370091D369 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF9F7AA71E8732370091D369 /* ExtensionDelegate.swift in Sources */,
+				DF9F7ABC1E87743B0091D369 /* RouteInterfaceController.swift in Sources */,
+				DF9F7AB81E8753210091D369 /* Route.swift in Sources */,
+				DF9F7AA51E8732370091D369 /* InterfaceController.swift in Sources */,
+				DF9F7ABA1E876C6A0091D369 /* RouteRowController.swift in Sources */,
+				DFB424701E8A09DC00C4215F /* Event.swift in Sources */,
+				DF9F7AB71E87531E0091D369 /* Landmark.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DFDB614C1E7CF558006CD591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB424741E8A229A00C4215F /* EventTableViewCell.swift in Sources */,
 				DF369A6A1E7F7DA3000E9991 /* NavigationController.swift in Sources */,
 				DF369A681E7F7010000E9991 /* QrReaderViewController.swift in Sources */,
 				DF369A661E7F635B000E9991 /* Route.swift in Sources */,
+				DF71669D1E88AB5800721E0B /* ARTrackingManager.swift in Sources */,
+				DF7166861E88629A00721E0B /* RoutesTableViewController.swift in Sources */,
+				DFB4246D1E8A048B00C4215F /* EventsTableViewController.swift in Sources */,
 				DF409D9D1E7E5AE700708D9C /* Landmark.swift in Sources */,
+				DF71669A1E88AB5800721E0B /* ARAnnotation.swift in Sources */,
+				DF7166A01E88AB6200721E0B /* DebugMapViewController.swift in Sources */,
+				DF71669B1E88AB5800721E0B /* ARAnnotationView.swift in Sources */,
 				DF409D9B1E7E479500708D9C /* AddLandmarkViewController.swift in Sources */,
 				DFDB615C1E7CF558006CD591 /* MapTracer.xcdatamodeld in Sources */,
 				DFDB616B1E7D0225006CD591 /* QrViewController.swift in Sources */,
 				DFDB61561E7CF558006CD591 /* ViewController.swift in Sources */,
-				DFDB61691E7CFBED006CD591 /* RoutesViewController.swift in Sources */,
-				DF369A641E7F61F0000E9991 /* AddRouteViewController.swift in Sources */,
+				DF7166A91E88B43F00721E0B /* TestAnnotationView.swift in Sources */,
+				DF7166881E88806200721E0B /* RouteButtonsState.swift in Sources */,
+				DF71669E1E88AB5800721E0B /* ARViewController.swift in Sources */,
+				DFDB61691E7CFBED006CD591 /* MapViewController.swift in Sources */,
+				DF71669C1E88AB5800721E0B /* ARConfiguration.swift in Sources */,
+				DFB4246F1E8A09D200C4215F /* Event.swift in Sources */,
 				DFDB61541E7CF558006CD591 /* AppDelegate.swift in Sources */,
+				DFB424761E8A288E00C4215F /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DF9F7AA21E8732370091D369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF9F7A9E1E8732370091D369 /* MapTracerWatch Extension */;
+			targetProxy = DF9F7AA11E8732370091D369 /* PBXContainerItemProxy */;
+		};
+		DF9F7AAC1E8732370091D369 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF9F7A921E8732370091D369 /* MapTracerWatch */;
+			targetProxy = DF9F7AAB1E8732370091D369 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		DF9F7A951E8732370091D369 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF9F7A961E8732370091D369 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		DFDB61571E7CF558006CD591 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -208,6 +531,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DF9F7AAE1E8732370091D369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CRCJ9D7Q8C;
+				IBSC_MODULE = MapTracerWatch_Extension;
+				INFOPLIST_FILE = MapTracerWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blogspot.nombre-temp.MapTracer.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		DF9F7AAF1E8732370091D369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CRCJ9D7Q8C;
+				IBSC_MODULE = MapTracerWatch_Extension;
+				INFOPLIST_FILE = MapTracerWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blogspot.nombre-temp.MapTracer.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		DF9F7AB01E8732370091D369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = CRCJ9D7Q8C;
+				INFOPLIST_FILE = "MapTracerWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blogspot.nombre-temp.MapTracer.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		DF9F7AB11E8732370091D369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = CRCJ9D7Q8C;
+				INFOPLIST_FILE = "MapTracerWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.blogspot.nombre-temp.MapTracer.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		DFDB61631E7CF558006CD591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -307,7 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CRCJ9D7Q8C;
 				INFOPLIST_FILE = MapTracer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blogspot.nombre-temp.MapTracer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,7 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CRCJ9D7Q8C;
 				INFOPLIST_FILE = MapTracer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blogspot.nombre-temp.MapTracer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -332,6 +725,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DF9F7AB21E8732370091D369 /* Build configuration list for PBXNativeTarget "MapTracerWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF9F7AB01E8732370091D369 /* Debug */,
+				DF9F7AB11E8732370091D369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF9F7AB41E8732370091D369 /* Build configuration list for PBXNativeTarget "MapTracerWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF9F7AAE1E8732370091D369 /* Debug */,
+				DF9F7AAF1E8732370091D369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DFDB614B1E7CF557006CD591 /* Build configuration list for PBXProject "MapTracer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

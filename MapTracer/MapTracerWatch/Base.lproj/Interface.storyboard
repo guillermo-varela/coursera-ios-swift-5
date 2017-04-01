@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Rutas-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Routes" title="Rutas" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MapTracerWatch" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text="Sin rutas" textAlignment="center" id="X76-O0-745"/>
+                        <table alignment="left" id="ndM-EV-S21">
+                            <items>
+                                <tableRow identifier="RouteRow" id="pLk-NU-8G9" customClass="RouteRowController" customModule="MapTracerWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="E8n-6d-FXv">
+                                        <items>
+                                            <label width="136" height="42" alignment="left" text="Label" textAlignment="center" id="tIR-st-YXv"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="routeLabel" destination="tIR-st-YXv" id="42M-Gh-hJH"/>
+                                        <segue destination="ByS-Q8-0vb" kind="push" id="D2v-2U-EGu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="noRoutesLabel" destination="X76-O0-745" id="JF2-pD-Bzf"/>
+                        <outlet property="routesTable" destination="ndM-EV-S21" id="wUp-Xy-YJ4"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--Ruta-->
+        <scene sceneID="lGD-9y-uk4">
+            <objects>
+                <controller identifier="Route" title="Ruta" id="ByS-Q8-0vb" customClass="RouteInterfaceController" customModule="MapTracerWatch_Extension">
+                    <items>
+                        <map width="1" height="107" alignment="left" id="kR5-nq-kgh"/>
+                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="3" id="LXX-yP-Kzf">
+                            <connections>
+                                <action selector="zoom:" destination="ByS-Q8-0vb" id="rRo-vr-5Kv"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceMap" destination="kR5-nq-kgh" id="pqW-UI-XWK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="300" y="37"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.054901960784313725" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>
